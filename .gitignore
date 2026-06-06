@@ -1,71 +1,53 @@
-# ------ 1. PYTHON BYTECODE ------
-# Python tự tạo các file này khi chạy, không cần commit
-__pycache__/
-*.py[cod]        # .pyc, .pyo, .pyd
-*.so             # C extension đã compile
+# ── Data ─────────────────────────────────────────────
+data/*.csv
+data/*.json
+data/*.xlsx
+data/*.zip
+data/*.gz
+data/*.parquet
 
-# ------ 2. PACKAGE & BUILD ------
-# Thư mục sinh ra khi build/publish package
-*.egg
+# ── Models đã train ───────────────────────────────────
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
 *.egg-info/
 dist/
 build/
-.eggs/
-*.whl
+*.egg
 
-# ------ 3. VIRTUAL ENVIRONMENT ------
-# Môi trường ảo — mỗi người tự tạo bằng requirements.txt
+# ── Môi trường ảo ─────────────────────────────────────
 venv/
 env/
+.env
 .venv/
 ENV/
 
-# ------ 4. JUPYTER NOTEBOOK ------
-# Checkpoint tự động của Jupyter, không cần lưu
+# ── Jupyter ───────────────────────────────────────────
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_local/
 
-# ------ 5. DỮ LIỆU LỚN ------
-# Bỏ comment dòng dưới nếu file CSV quá lớn (> 100MB)
-# data/tiki_reviews.csv
-# data/*.csv
-
-# ------ 6. MODEL ĐÃ TRAIN ------
-# File model thường rất nặng (MB → GB), không commit
-outputs/models/
-*.pkl
-*.joblib
-*.h5
-*.pt
-*.pth
-
-# ------ 7. LOG & DEBUG ------
-*.log
-logs/
-*.out
-
-# ------ 8. IDE & EDITOR ------
+# ── IDE ───────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# ------ 9. HỆ ĐIỀU HÀNH ------
-.DS_Store          # macOS
-Thumbs.db          # Windows
-desktop.ini        # Windows
+# ── OS ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# ------ 10. BIẾN MÔI TRƯỜNG & BÍ MẬT ------
-# QUAN TRỌNG: không bao giờ commit API key, password!
-.env
-.env.local
-*.env
-secrets.py
-config_local.py
-
-# ------ 11. COVERAGE & TEST ------
-.coverage
-htmlcov/
-.pytest_cache/
-.tox/
+# ── Logs và cache ─────────────────────────────────────
+*.log
+*.tmp
+.cache/
+nltk_data/
